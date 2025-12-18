@@ -222,7 +222,7 @@ function App() {
           <div className="mt-32 p-1 bg-gradient-to-r from-transparent via-[var(--color-laser-red)] to-transparent opacity-20 h-[1px] w-full"></div>
 
           <div className="mt-20">
-            <h2 className="text-5xl md:text-6xl font-black mb-8">TU SISTEMA EN <span className="text-[var(--color-laser-red)]">30 DÍAS</span></h2>
+            <h2 className="text-5xl md:text-6xl mb-8">TU SISTEMA EN <span className="text-[var(--color-laser-red)]">30 DÍAS</span></h2>
             <p className="text-xl text-[var(--color-hud-text)] mb-12 max-w-2xl mx-auto">
               Si tienes una oferta validada y presupuesto, nosotros ponemos el motor.
             </p>
