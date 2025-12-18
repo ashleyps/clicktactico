@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { AlertCircle, Target, Users, Zap, CheckCircle2, XCircle, ArrowRight, ShieldCheck, Activity, BarChart3, Lock } from 'lucide-react';
+import { Target, Users, Zap, CheckCircle2, XCircle, ShieldCheck, Activity, BarChart3, Lock } from 'lucide-react';
 import classNames from 'classnames';
 
 // --- UI COMPONENTS ---
