@@ -84,7 +84,7 @@ function App() {
             </p>
 
             {/* Bullet Points */}
-            <div className="flex flex-col md:flex-row justify-center gap-6 mb-12 font-mono text-sm md:text-base text-white/80">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12 font-mono text-sm md:text-base text-white/80">
               <span className="flex items-center gap-2"><span className="text-[var(--color-laser-red)]">✗</span> SIN LEADS FRÍOS</span>
               <span className="flex items-center gap-2"><span className="text-[var(--color-laser-red)]">✗</span> SIN PERSEGUIR</span>
               <span className="flex items-center gap-2"><span className="text-green-500">✓</span> SOLO FILTRADOS</span>
