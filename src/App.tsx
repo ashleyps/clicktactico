@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Target, Users, Zap, CheckCircle2, XCircle, ShieldCheck, Activity, BarChart3, Lock } from 'lucide-react';
+import { Target, Users, Zap, ShieldCheck, Activity, BarChart3, Lock } from 'lucide-react';
 import classNames from 'classnames';
 
 // --- UI COMPONENTS ---
@@ -65,11 +65,12 @@ function App() {
       <section className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 pt-20">
         <div className="max-w-6xl w-full mx-auto relative">
 
-          {/* Top HUD decoration */}
-          <div className="absolute top-0 w-full flex justify-between text-[var(--color-hud-text)] font-mono text-xs opacity-50 mb-10">
-            <span>COORDS: 40.7128° N, 74.0060° W</span>
-            <span className="animate-pulse text-[var(--color-laser-red)]">● LIVE FEED</span>
-            <span>SYS.VER: 2.0.4</span>
+          {/* Navbar with Logo */}
+          <div className="absolute top-0 left-0 right-0 flex justify-between items-center mb-10">
+            <img src="/clicktactico-logo-white-horizontal.svg" alt="Click Táctico" className="h-8 md:h-10" />
+            <div className="text-[var(--color-hud-text)] font-mono text-xs opacity-50">
+              <span className="animate-pulse text-[var(--color-laser-red)]">● LIVE</span>
+            </div>
           </div>
 
           <motion.div
@@ -89,9 +90,9 @@ function App() {
 
             {/* Bullet Points */}
             <div className="flex flex-col md:flex-row justify-center gap-6 mb-12 font-mono text-sm md:text-base text-white/80">
-              <span className="flex items-center gap-2"><XCircle className="text-[var(--color-laser-red)]" size={16} /> SIN LEADS FRÍOS</span>
-              <span className="flex items-center gap-2"><XCircle className="text-[var(--color-laser-red)]" size={16} /> SIN PERSEGUIR</span>
-              <span className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> SOLO FILTRADOS</span>
+              <span className="flex items-center gap-2"><span className="text-[var(--color-laser-red)]">✗</span> SIN LEADS FRÍOS</span>
+              <span className="flex items-center gap-2"><span className="text-[var(--color-laser-red)]">✗</span> SIN PERSEGUIR</span>
+              <span className="flex items-center gap-2"><span className="text-green-500">✓</span> SOLO FILTRADOS</span>
             </div>
 
             <div className="flex justify-center">
