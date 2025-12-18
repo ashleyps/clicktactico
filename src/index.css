@@ -173,3 +173,10 @@ h6 {
 .text-hud {
   color: var(--color-hud-text);
 }
+
+/* SVG Icon Fix */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  shape-rendering: auto;
+}
