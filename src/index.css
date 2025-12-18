@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* --- PALETTE: STRICT DARK MODE --- */
+  --color-void: #24252e;
+  /* Hero Background */
+  --color-void-dark: #1a1b22;
+  /* Panels / Contrast */
+  --color-laser-red: #ed1118;
+  /* Action / Alerts */
+  --color-text-white: #ffffff;
+  /* Primary Text */
+  --color-hud-gray: #3f4152;
+  /* Grids / Inactive Borders */
+  --color-hud-text: #8a8d9f;
+  /* Secondary Data Text */
+
+  /* --- TYPOGRAPHY --- */
+  --font-main: 'Rubik', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+
+  /* --- UI TOKENS --- */
+  --hud-border-width: 1px;
+  --hud-radius: 2px;
+  /* Brutalist - smooth but sharp */
+  --scanline-color: rgba(237, 17, 24, 0.03);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-text-white);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* --- TACTICAL UTILITIES --- */
+
+/* Grid Background Effect */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(var(--color-hud-gray) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-hud-gray) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  opacity: 0.15;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* Scanline Overlay */
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+  background-size: 100% 4px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  /* Bold Impact Style */
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* --- COMPONENT CLASSES --- */
+
+/* Tactical Button */
+.btn-tactical {
+  background: var(--color-laser-red);
+  color: white;
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: none;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px),
+      calc(100% - 10px) 100%, 0 100%, 0 10px);
+  /* Chamfered Edges */
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.btn-tactical:hover {
+  background: #ff1f27;
+  /* Slightly brighter red */
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(237, 17, 24, 0.4);
+}
+
+.btn-tactical:active {
+  transform: translateY(1px);
+}
+
+/* HUD Panel */
+.hud-panel {
+  border: 1px solid var(--color-hud-gray);
+  background: rgba(36, 37, 46, 0.6);
+  /* Semi-transparent Void */
+  backdrop-filter: blur(4px);
+  position: relative;
+}
+
+/* Corner Crosshairs */
+.hud-corners::after,
+.hud-corners::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-laser-red);
+  transition: all 0.3s ease;
+}
+
+.hud-corners::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-corners::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Text Highlights */
+.text-laser {
+  color: var(--color-laser-red);
+}
+
+.text-void {
+  color: var(--color-void);
+}
+
+.text-hud {
+  color: var(--color-hud-text);
+}
