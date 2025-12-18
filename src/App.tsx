@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Target, Users, Zap, ShieldCheck, Activity, BarChart3, Lock } from 'lucide-react';
+import { Navbar } from './components/Navbar';
 import classNames from 'classnames';
 
 // --- UI COMPONENTS ---
@@ -61,17 +62,13 @@ function App() {
       <div className="bg-grid-pattern fixed inset-0 z-0"></div>
       <div className="scanlines fixed inset-0 z-50 pointer-events-none"></div>
 
+      <Navbar />
+
       {/* --- HERO SECTION --- */}
-      <section className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 pt-20">
+      <section className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 pt-32 md:pt-40">
         <div className="max-w-6xl w-full mx-auto relative">
 
-          {/* Navbar with Logo */}
-          <div className="absolute top-0 left-0 right-0 flex justify-between items-center mb-10">
-            <img src="/clicktactico-logo-white-horizontal.svg" alt="Click Táctico" className="h-8 md:h-10" />
-            <div className="text-[var(--color-hud-text)] font-mono text-xs opacity-50">
-              <span className="animate-pulse text-[var(--color-laser-red)]">● LIVE</span>
-            </div>
-          </div>
+
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
