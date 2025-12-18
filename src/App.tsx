@@ -68,8 +68,6 @@ function App() {
       <section className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 pt-32 md:pt-40">
         <div className="max-w-6xl w-full mx-auto relative">
 
-
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
