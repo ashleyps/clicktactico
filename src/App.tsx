@@ -105,7 +105,7 @@ function App() {
       </section>
 
       {/* --- PROBLEM SECTION (The "Volume Trap") --- */}
-      <section className="relative z-10 py-24 md:py-32 px-4 border-t border-[var(--color-hud-gray)] bg-[var(--color-void)]">
+      <section id="problem" className="relative z-10 py-24 md:py-32 px-4 border-t border-[var(--color-hud-gray)] bg-[var(--color-void)]">
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             title="La 'Trampa del Volumen'"
@@ -136,7 +136,7 @@ function App() {
 
 
       {/* --- SOLUTION SECTION (The Mechanism) --- */}
-      <section className="relative z-10 py-24 px-4 bg-[var(--color-void-dark)] overflow-hidden">
+      <section id="solution" className="relative z-10 py-24 px-4 bg-[var(--color-void-dark)] overflow-hidden">
         <div className="max-w-6xl mx-auto relative">
           <SectionTitle title="Protocolo Smart Quiz" />
 
@@ -164,7 +164,7 @@ function App() {
       </section>
 
       {/* --- DEMO SECTION (Notification) --- */}
-      <section className="relative z-10 py-32 px-4" ref={targetRef}>
+      <section id="cases" className="relative z-10 py-32 px-4" ref={targetRef}>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <h2 className="text-4xl font-bold mb-6">No recibes "Datos". <br />Recibes <span className="text-[var(--color-laser-red)]">INTELIGENCIA.</span></h2>
@@ -211,7 +211,7 @@ function App() {
       </section>
 
       {/* --- SECTORS & OFFER --- */}
-      <section className="relative z-10 py-24 px-4 bg-[var(--color-void-dark)] border-t border-[var(--color-hud-gray)]">
+      <section id="contact" className="relative z-10 py-24 px-4 bg-[var(--color-void-dark)] border-t border-[var(--color-hud-gray)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-12">SECTORES COMPATIBLES</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-sm text-[var(--color-hud-text)]">
