@@ -172,7 +172,7 @@ function App() {
             <h2 className="text-4xl font-bold mb-6">No recibes "Datos". <br />Recibes <span className="text-[var(--color-laser-red)]">INTELIGENCIA.</span></h2>
             <p className="text-[var(--color-hud-text)] text-lg mb-8">Imagina que tu equipo recibiera ESTO cada mañana en lugar de una lista de teléfonos fantasma.</p>
             <ul className="space-y-4 font-mono text-sm text-[var(--color-hud-text)]">
-              <li className="flex items-center gap-3"><span className="w-2 h-2 bg-[var(--color-laser-red)]"></span> SCORE DE CALIDAD > 90</li>
+              <li className="flex items-center gap-3"><span className="w-2 h-2 bg-[var(--color-laser-red)]"></span> SCORE DE CALIDAD &gt; 90</li>
               <li className="flex items-center gap-3"><span className="w-2 h-2 bg-[var(--color-laser-red)]"></span> INTENCIÓN DE COMPRA: ALTA</li>
             </ul>
           </div>
